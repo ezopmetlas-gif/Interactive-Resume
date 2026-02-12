@@ -11,7 +11,7 @@ This is an interactive Python-based resume application.
  ### Philosophy
   "Optimizing for the extremes." Whether it's a €80 budget smartphone or a high-speed fiber backbone, I write code that respects the hardware.
 
- ###  Current Focus
+ ### Current Focus
   - AI Logic Evaluation (Alignerr / Labelbox)
   - High-Performance Mobile Architectures
   - Technical Strategy for Digital Growth
