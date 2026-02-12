@@ -15,3 +15,8 @@ This is an interactive Python-based resume application.
   - AI Logic Evaluation (Alignerr / Labelbox)
   - High-Performance Mobile Architectures
   - Technical Strategy for Digital Growth
+
+ ## Code Showcases (Snippets)
+  \\Below are key logic segments from my larger private projects:
+  1. **[Real-Time Engine](showcase_performance.dart):** How I handle high-frequency UI updates without draining battery.
+  2. **[Work-Shift Logic](showcase_logic.dart):** How I manage complex labor regulations and live balance calculations.
