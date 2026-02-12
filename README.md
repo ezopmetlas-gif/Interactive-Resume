@@ -3,7 +3,7 @@ This is an interactive Python-based resume application.
 
 # Başar Songör | Technical Specialist & Developer
 
- ### 🛠 Tech Stack
+ ### Tech Stack
   - **Mobile:** Flutter / Dart / Kotlin / Java
   - **Logic:** Python / AI Model Alignment / Stress Testing
   - **Infrastructure:** Fiber Optic Specialist (Network Precision)
