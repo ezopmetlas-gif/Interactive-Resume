@@ -1,2 +1,2 @@
 # Interactive-Resume
-baschar_songoer_cv.py
+This is an interactive Python-based resume application.
