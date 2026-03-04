@@ -1,70 +1,90 @@
-# ==============================================================================
-# INSTRUCTIONS: 
-# 1. Rename this file from '.txt' to '.py'
-# 2. Run it using: python basar_songor_cv.py
-# ==============================================================================
+"""
+================================================================================
+Kurzanleitung für HR- und Recruiting-Experten / Quick Guide for HR:
 
-import webbrowser
+🇬🇧 EN: Download this file, change the extension to .py, and run it in your terminal.
+🇩🇪 DE: Laden Sie diese Datei herunter, ändern Sie die Endung in .py und führen Sie 
+       sie im Terminal aus, um das interaktive Profil zu starten.
+================================================================================
+FILE: baschar_songoer_cv.py
+FORMAT: ENCRYPTED DASHBOARD
+AUTHOR: Başar Songör
+================================================================================
+"""
+
 import time
 import sys
+import webbrowser
+import os
+
+# Windows terminallerinde renklerin çalışması için
+os.system("")
 
 class CandidateProfile:
-    """
-    Candidate Profile for Alignerr - AI Training & Code Evaluation
-    """
     def __init__(self):
-        self.name = "Başar Songör"
-        self.role = "Software Developer & Technical Specialist"
-        self.location = "Germany"
+        self.identity = "Başar Songör"
+        self.role = "System Architect & Mobile Developer"
         self.background = "Telecommunications (Fiber Optics) & App Development"
-        self.linkedin_url = "https://www.linkedin.com/in/başar-songör-3b582524b?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+        self.technical_stack = ["Kotlin", "Java", "Dart (Flutter)", "Python", "Rust"]
+        self.specialties = ["Stress Testing", "Logic Evaluation", "Technical SEO", "Deep Linking"]
+        self.mission = "Bridging the gap between fiber-optic precision and high-level software logic."
+        self.linkedin_url = "https://www.linkedin.com/in/başar-songör-3b582524b"
 
-    def get_technical_stack(self):
-        return {
-            "Languages": ["Kotlin", "Java", "Dart (Flutter)", "Python (Basic/Scripting)"],
-            "Specialties": ["Stress Testing", "Debugging", "Error Handling", "App Planning"],
-            "Modern Web/Growth": ["Technical SEO", "Deep Linking", "Content Architecture"]
-        }
+    def type_text(self, text, delay=0.02, color="\033[92m"):
+        for char in text:
+            sys.stdout.write(f"{color}{char}\033[0m")
+            sys.stdout.flush()
+            time.sleep(delay)
+        print()
 
-    def print_animated_summary(self):
-        header = f"--- {self.name.upper()} | {self.role} ---"
-        print("\n" + "=" * len(header))
-        print(header)
-        print("=" * len(header) + "\n")
+    def trigger_dashboard(self):
+        os.system('cls' if os.name == 'nt' else 'clear')
         
-        print(f"[Location]: {self.location}")
-        print(f"[Industry]: {self.background}")
-        print("\n[CORE COMPETENCIES]")
+        cyan, green, yellow, reset, bold = "\033[96m", "\033[92m", "\033[93m", "\033[0m", "\033[1m"
         
-        for category, skills in self.get_technical_stack().items():
-            print(f"  > {category:18}: {', '.join(skills)}")
-            time.sleep(0.2)
-            
-        print("\n[MISSION STATEMENT]")
-        print("  'Bridging the gap between fiber-optic precision and high-level software logic.'")
-        print("-" * 60)
+        ascii_art = f"""{cyan}{bold}
+  ____                           _____                            
+ |  _ \                         / ____|                           
+ | |_) | __ _ ___  __ _ _ __   | (___   ___  _ __   __ _  ___  _ __ 
+ |  _ < / _` / __|/ _` | '__|   \___ \ / _ \| '_ \ / _` |/ _ \| '__|
+ | |_) | (_| \__ \ (_| | |      ____) | (_) | | | | (_| | (_) | |   
+ |____/ \__,_|___/\__,_|_|     |_____/ \___/|_| |_|\__, |\___/|_|   
+                                                    __/ |         
+                                                   |___/          
+>> {self.role.upper()} <<
+{reset}"""
+        print(ascii_art)
+        
+        self.type_text("[*] Initiating secure boot sequence...", 0.04, yellow)
+        time.sleep(0.3)
+        self.type_text("[*] Decrypting profile data...", 0.04, yellow)
+        time.sleep(0.5)
 
-    def open_portfolio(self):
-        print("\n[SYSTEM]: Connection to professional profile initiated...")
-        time.sleep(1)
-        print("[SYSTEM]: Redirecting to LinkedIn...")
-        webbrowser.open(self.linkedin_url)
+        print(f"\n{cyan}╔════════════════════════ CANDIDATE DASHBOARD ════════════════════════╗{reset}")
+        self.type_text(f"║ IDENTITY     : {self.identity}", color=green)
+        self.type_text(f"║ INDUSTRY     : {self.background}", color=green)
+        self.type_text(f"║ TECH STACK   : {' | '.join(self.technical_stack)}", color=green)
+        self.type_text(f"║ EXPERTISE    : {' | '.join(self.specialties)}", color=green)
+        self.type_text(f"║ MISSION      : {self.mission}", color=green)
+        print(f"{cyan}╚═════════════════════════════════════════════════════════════════════╝{reset}\n")
+        time.sleep(0.5)
 
-def main():
-    candidate = CandidateProfile()
-    
-    # Terminal çıktısını göster
-    candidate.print_animated_summary()
-    
-    # Etkileşim kısmı
-    try:
-        user_input = input("\nWould you like to view the full CV on LinkedIn? (Y/N): ").strip().lower()
-        if user_input == 'y':
-            candidate.open_portfolio()
-        else:
-            print("\nThank you for reviewing the source code. Have a great day!")
-    except KeyboardInterrupt:
-        print("\nProcess terminated.")
+    def interact(self):
+        self.trigger_dashboard()
+        yellow, reset = "\033[93m", "\033[0m"
+        
+        try:
+            user_input = input(f"{yellow}>> Would you like to connect on LinkedIn? (Y/N): {reset}").strip().lower()
+            if user_input == 'y':
+                self.type_text("\n[*] Portlar açılıyor / Opening ports...", 0.03, "\033[96m")
+                self.type_text("[*] Güvenli ağa yönlendiriliyorsunuz / Redirecting to secure network...", 0.03, "\033[92m")
+                time.sleep(1)
+                webbrowser.open(self.linkedin_url)
+            else:
+                self.type_text("\n[SYSTEM] Connection aborted. Thank you for reviewing the source code. Have a great day!", 0.03, "\033[91m")
+        except KeyboardInterrupt:
+            print("\n\033[91m[!] Process terminated by user.\033[0m")
 
 if __name__ == "__main__":
-    main()
+    profile = CandidateProfile()
+    profile.interact()
