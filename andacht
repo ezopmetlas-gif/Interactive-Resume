@@ -102,7 +102,7 @@
 </head>
 <body>
     <div class="container">
-        <img src="https://raw.githubusercontent.com/ezopmetlas-gif/Interactive-Resume/refs/heads/main/andacht" alt="Andacht App Logo" class="profile-img">
+        <img src="https://raw.githubusercontent.com/ezopmetlas-gif/Interactive-Resume/main/andacht.png" alt="Andacht App Logo" class="profile-img">
         <h1 class="title">Andacht</h1>
         <p class="description">Namaz Vakitleri & Kıble</p>
         <div class="links-container">
